@@ -14,4 +14,12 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/web-projects', (req, res) => {
+  res.send('this is the web projects page')
+})
+
+router.get('/design-projects', (req, res) => {
+  res.send('this is the design page')
+})
+
 module.exports = router
