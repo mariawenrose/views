@@ -15,11 +15,11 @@ router.get('/', (req, res) => {
 })
 
 router.get('/web-projects', (req, res) => {
-  res.send('this is the web projects page')
+  res.render('./web-projects')
 })
 
 router.get('/design-projects', (req, res) => {
-  res.send('this is the design page')
+  res.render('./design-projects')
 })
 
 module.exports = router
