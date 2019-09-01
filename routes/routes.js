@@ -18,19 +18,31 @@ router.get('/web-projects', (req, res) => {
   res.render('./web-projects')
 })
 
+
 router.get('/design-projects', (req, res) => {
-  db.getUsers()
-  .then(users => {
+  db.getProjects()
+  .then(projects => {
+    console.log(projects)
     res.render('./design-projects', {
-      users: users
+      projects: projects
+
     })
   })
 })
 
+
 router.post('/', (req, res) => {
-  var project = req.body
+
+  var project = {
+    title: req.body.projectName,
+    description: req.body.projectDescription,
+    category: req.body.category
+  }
   console.log(project)
-  res.send(req.body)
+  db.addProject(project)
+  .then (project => {
+    res.redirect('/')
+  })
 })
 
 module.exports = router

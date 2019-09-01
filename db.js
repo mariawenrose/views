@@ -4,7 +4,9 @@ const connection = require('knex')(config)
 
 module.exports = {
   getUser: getUser,
-  getUsers: getUsers
+  getUsers: getUsers,
+  getProjects: getProjects,
+  addProject: addProject
 }
 
 function getUsers (db = connection) {
@@ -13,4 +15,13 @@ function getUsers (db = connection) {
 
 function getUser (id, db = connection) {
   return db('users').where('id', id).first()
+}
+
+function getProjects (db = connection) {
+  return db('projects')
+  .where('category', 'design')
+}
+
+function addProject (project, db = connection) {
+  return db('projects').insert(project)
 }
