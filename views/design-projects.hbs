@@ -1,14 +1,9 @@
 <p>This is Design yo</p>
-
-
- <ul class="colour">
-    {{#each users}}
-    <li>{{name}} ({{email}})</li>
-    {{/each}}
-  </ul> 
-
-   <ul>
-    {{#each projects}}
-    <li>{{title}} </li>
-    {{/each}}
-  </ul> 
+<div class="container">
+  {{#each projects}}
+  <div class="project-tile">
+    <p>{{title}}</p> 
+    <button>Delete</button>
+  </div>
+  {{/each}}
+</div>
