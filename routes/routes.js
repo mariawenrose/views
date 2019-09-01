@@ -19,7 +19,12 @@ router.get('/web-projects', (req, res) => {
 })
 
 router.get('/design-projects', (req, res) => {
-  res.render('./design-projects')
+  db.getUsers()
+  .then(users => {
+    res.render('./design-projects', {
+      users: users
+    })
+  })
 })
 
 module.exports = router

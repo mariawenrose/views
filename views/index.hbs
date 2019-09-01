@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <link rel="stylesheet" href="main.css">
-  <title>Views Portfolio</title>
-</head>
-
-<body>
-  <a href="web-projects">Web</a>
-  <a href="design-projects">Digital Design</a>
-
-  <form action="/add-user" method="post" name="form">
-    <div>
-      <label for="name">Name</label>
-      <input type="name">
-    </div>
-    <div>
-      <label for="email">Email</label>
-      <input type="email">
-    </div>
-    <div>
-      <label for="images"></label>
-      <input type="file" name="pic" accept="image/*">
-    </div>
-    <input type="submit" name="save-button">
-  </form>
-
-  <ul>
-    {{#each users}}
-    <li>{{name}} ({{email}})</li>
-    {{/each}}
-  </ul>
-</body>
-
-</html>
+<div class="container">
+  <div id="left-panel" class="index-col">
+    {{>categories}}
+  </div>
+  <div id="right-panel" class="index-col">
+      {{>form}}
+  </div>
+</div>
