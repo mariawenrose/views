@@ -1,15 +1,17 @@
-  <form id ="upload-form"  action="/add-user" method="post" name="form">
-    <div class="mb">
-      <label for="name">Name</label>
-      <input type="name">
-    </div>
-    <div class="mb"> 
-      <label for="email">Email</label>
-      <input type="email">
-    </div>
-    <div class="mb">
-      <label for="images"></label>
-      <input type="file" name="pic" accept="image/*">
-    </div>
+<form id="upload-form" action="/" method="post" name="form">
+    <label for="project-name">Project Name:</label>
+    <input type="text" name="project-name">
+
+    <label for="project-description">Description:</label>
+    <input type="text" name="project-description">
+
+    <label for="category">Category:</label>
+    <input type="radio" name="category" value="design" id="design-radio" checked>
+    <label for="design-radio">Design</label>
+    <input type="radio" name="category" value="web" id="web-radio">
+    <label for="web-radio">Web</label>
+
+    <label for="images">Upload Image:</label>
+    <input type="file" name="pic" accept="image/*">
     <input type="submit" name="save-button">
-  </form>
+</form>

@@ -27,4 +27,15 @@ router.get('/design-projects', (req, res) => {
   })
 })
 
+router.post('/', (req, res) => {
+  var project = req.body
+  // var project = {
+  //   name: req.body.name,
+  //   description: req.body.description,
+  //   category: req.body.g1,
+  // }
+  console.log(project)
+  res.send(req.body)
+})
+
 module.exports = router
