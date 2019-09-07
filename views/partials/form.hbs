@@ -1,17 +1,21 @@
 <form id="upload-form" action="/" method="post" name="form">
-    <label for="project-name">Project Name:</label>
-    <input type="text" name="projectName">
+  <label for="project-name">Project Name:</label>
+  <input type="text" name="projectName">
 
-    <label for="project-description">Description:</label>
-    <input type="text" name="projectDescription">
+  <label for="project-description">Description:</label>
+  <input type="text" name="projectDescription">
 
+  <div class="radio-wrapper">
     <label for="category">Category:</label>
-    <input type="radio" name="category" value="design" id="design-radio" checked>
-    <label for="design-radio">Design</label>
-    <input type="radio" name="category" value="web" id="web-radio">
-    <label for="web-radio">Web</label>
+      <div class="radio-button-wrapper">
+      <input type="radio" name="category" value="design" id="design-radio" class="mr" checked>
+      <label for="design-radio" class="mr">Design</label>
+      <input type="radio" name="category" value="web" id="web-radio" class="mr">
+      <label for="web-radio">Web</label>
+    </div>
+  </div>
 
-    <label for="images">Upload Image:</label>
-    <input type="file" name="pic" accept="image/*">
-    <input type="submit" name="save-button">
+  <label for="images">Upload Image:</label>
+  <input type="file" name="pic" accept="image/*">
+  <input type="submit" name="save-button">
 </form>
