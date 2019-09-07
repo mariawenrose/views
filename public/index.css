@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+
+
 }
 
 .container {
@@ -21,6 +24,20 @@
   width: 30%;
   display: flex;
   justify-content: space-between;
+}
+
+.web-tile,
+.design-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* category icons */
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: darkgreen;
 }
 
 #upload-form {
