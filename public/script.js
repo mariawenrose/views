@@ -9,7 +9,7 @@ function launch() {
     buttons.map(button => button.addEventListener('click')) 
 }
 
-function deleteProject(button) {
-    router.delete()
-}
+// function deleteProject(button) {
+//     router.delete()
+// }
 

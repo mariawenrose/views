@@ -1,9 +1,16 @@
 <p>This is Design yo</p>
-<div class="container">
+<div class="container space-evenly">
   {{#each projects}}
-  <div class="project-tile">
-    <p>{{title}}</p> 
-    <div>
+  <div class="project-wrapper">
+    <div class="project-tile">
+    <div class="canvas"></div>
+      <div class="project-text">
+        <h4>{{title}}</h4> 
+        <p>{{description}}</p>
+      </div>
+    </div>
+
+    <div class="delete-button-wrapper">
       <button id= {{id}} class="button" onClick ="deleteProject()">Delete</button>
     </div>
     {{!-- <p>{{tools}}</p> --}}
