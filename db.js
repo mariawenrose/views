@@ -3,8 +3,6 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getUser: getUser,
-  getUsers: getUsers,
   getProjects: getProjects,
   addProject: addProject
 }
@@ -25,3 +23,6 @@ function getProjects (db = connection) {
 function addProject (project, db = connection) {
   return db('projects').insert(project)
 }
+
+// function deleteUser (project db = connection)
+//

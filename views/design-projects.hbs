@@ -3,7 +3,10 @@
   {{#each projects}}
   <div class="project-tile">
     <p>{{title}}</p> 
-    <button>Delete</button>
+    <div>
+      <button id= {{id}} class="button" onClick ="deleteProject()">Delete</button>
+    </div>
+    {{!-- <p>{{tools}}</p> --}}
   </div>
   {{/each}}
 </div>

@@ -30,7 +30,6 @@ router.get('/design-projects', (req, res) => {
   })
 })
 
-
 router.post('/', (req, res) => {
 
   var project = {
@@ -44,5 +43,8 @@ router.post('/', (req, res) => {
     res.redirect('/')
   })
 })
+
+router.delete('')
+
 
 module.exports = router
