@@ -18,6 +18,9 @@ router.get('/web-projects', (req, res) => {
   res.render('./web-projects')
 })
 
+router.get('/', (req, res) => {
+  res.render('/')
+})
 
 router.get('/design-projects', (req, res) => {
   db.getProjects()
