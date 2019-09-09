@@ -4,32 +4,26 @@ const db = require('../db')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  db.getUsers()
-    .then(users => {
-      res.render('index', {users: users})
-    })
-    .catch(err => {
-      res.status(500).send('DATABASE ERROR: ' + err.message)
-    })
-})
-
-router.get('/web-projects', (req, res) => {
-  res.render('./web-projects')
-})
 
 router.get('/', (req, res) => {
-  res.render('/')
+  res.render('./index')
 })
 
-router.get('/design-projects', (req, res) => {
-  db.getProjects()
+router.get('/category/:type', (req, res) => {
+  db.getProjects(req.params.type)
   .then(projects => {
-    console.log(projects)
-    res.render('./design-projects', {
+    res.render('./projects', {
       projects: projects
 
     })
+  })
+})
+
+router.post('/deleteProject/:id', (req, res) => {
+  console.log(req.params)
+  db.deleteProjects(req.params.id)
+  .then(() => {
+    res.redirect('/projects')
   })
 })
 
@@ -47,7 +41,7 @@ router.post('/', (req, res) => {
   })
 })
 
-router.delete('')
+
 
 
 module.exports = router

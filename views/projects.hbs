@@ -11,10 +11,15 @@
         </div>
       </div>
     </div>
-
+{{!-- 
     <div class="delete-button-wrapper">
       <button id={{id}} class="button" onClick="deleteProject()">Delete</button>
-    </div>
+    </div> --}}
+
+    <form action="/deleteProject/{{id}}" method="post">
+      <input type="submit" value="delete">
+      {{!-- <input type="hidden" value={{id}}> --}}
+    </form>
     {{!-- <p>{{tools}}</p> --}}
   </div>
   {{/each}}
