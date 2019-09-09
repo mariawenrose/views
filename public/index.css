@@ -86,10 +86,7 @@
   background-color: darkgreen;
 }
 
-#upload-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+#form-card {
   height: 45%;
   padding: 3em;
   background-color: #3f50b4;
@@ -97,6 +94,11 @@
   -webkit-box-shadow: 1px 13px 24px 1px rgba(0,0,0,0.27);
   -moz-box-shadow: 1px 13px 24px 1px rgba(0,0,0,0.27);
   box-shadow: 1px 13px 24px 1px rgba(0,0,0,0.27);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .radio-wrapper {
@@ -109,6 +111,10 @@
   justify-content: space-evenly
 }
 
+#project-image-form {
+  display: flex;
+  flex-direction: column;
+}
 
 
 /* ------------------------ 
@@ -117,6 +123,15 @@ GLOBAL
 .mb {
   margin-bottom: 1em;
 }
+
+.mb-m {
+  margin-bottom: 2em;
+}
+
+.mb-xs {
+  margin-bottom: .5em;
+}
+
 
 .mh {
   height: 100%;
@@ -163,6 +178,12 @@ a {
 
 label {
   text-shadow: 1px 2px 2px #080302;
+}
+
+input[type=text] {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.856);
 }
 
 /* ------------------------ 

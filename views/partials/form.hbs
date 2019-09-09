@@ -1,21 +1,28 @@
-<form id="upload-form" action="/" method="post" name="form">
-  <label for="project-name">Project Name:</label>
-  <input type="text" name="projectName">
-
-  <label for="project-description">Description:</label>
-  <input type="text" name="projectDescription">
-
-  <div class="radio-wrapper">
-    <label for="category">Category:</label>
-      <div class="radio-button-wrapper">
-      <input type="radio" name="category" value="design" id="design-radio" class="mr" checked>
-      <label for="design-radio" class="mr">Design</label>
-      <input type="radio" name="category" value="web" id="web-radio" class="mr">
-      <label for="web-radio">Web</label>
+<div id="form-card">
+  <form id="project-text-form" action="/" method="post" name="form">  
+    <div class="input-wrapper">
+      <label for="project-name" class="mb-xs">Project Name:</label>
+      <input type="text" name="projectName" class="mb"/>
     </div>
-  </div>
 
-  <label for="images">Upload Image:</label>
-  <input type="file" name="pic" accept="image/*">
-  <input type="submit" name="save-button">
-</form>
+    <div class="input-wrapper">
+      <label for="project-description" class="mb-xs">Description:</label>
+      <input type="text" name="projectDescription" class="mb"/>
+    </div>
+
+    <div class="radio-wrapper mb">
+      <label for="category">Category:</label>
+      <div class="radio-button-wrapper">
+        <input type="radio" name="category" value="design" id="design-radio" class="mr" checked>
+        <label for="design-radio" class="mr">Design</label>
+        <input type="radio" name="category" value="web" id="web-radio" class="mr">
+        <label for="web-radio">Web</label>
+      </div>
+    </div>
+  </form>
+
+  <form id="project-image-form" action='/s3/upload' method="post" enctype="multipart/form-data">
+    <input type='file' name='my-upload-field' class="mb-m"/>
+    <input type='submit' value='upload'/>
+  </form>
+</div>

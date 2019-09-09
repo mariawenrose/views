@@ -20,24 +20,29 @@
   },
   "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
   "dependencies": {
+    "aws-sdk": "^2.524.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "knex": "^0.16.3",
+    "nodemon": "^1.18.10",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "pg": "^7.12.1",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "cheerio": "1.0.0-rc.2",
+    "jest": "^24.6",
+    "supertest": "^4.0.2",
+    "babel-loader": "^8.0.5",
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel": "^6.23.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.9.0",
-    "babel-loader": "^8.0.5",
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.2",
-    "knex": "^0.16.3",
-    "nodemon": "^1.18.10",
-    "sqlite3": "^4.0.6",
     "superagent": "^5.1.0",
     "webpack": "^4.39.3"
-  },
-  "devDependencies": {
-    "cheerio": "1.0.0-rc.2",
-    "jest": "^24.6",
-    "supertest": "^4.0.2"
   }
 }
