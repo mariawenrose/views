@@ -6,6 +6,7 @@ exports.up = (knex, Promise) => {
       table.string('category')
       table.string('role')
       table.string('tools')
+      table.string('image')
 
     })
   }
