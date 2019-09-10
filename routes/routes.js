@@ -1,16 +1,13 @@
 const express = require('express')
-
 const db = require('../db')
+require('dotenv').config()
 
 const router = express.Router()
 
 const aws = require('aws-sdk')
 const multer = require('multer')
 const multerS3 = require('multer-s3')
-require('dotenv').config()
 
-console.log(process.env.AWS_ACCESS_KEY_ID)
-console.log(process.env.AWS_SECRET_ACCESS_KEY)
 
 var s3 = new aws.S3({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -42,28 +39,19 @@ router.get('/category/:type', (req, res) => {
   .then(projects => {
     res.render('./projects', {
       projects: projects
-
     })
   })
 })
 
-router.post('/deleteProject/:id', (req, res) => {
-  console.log(req.params)
-  db.deleteProjects(req.params.id)
-  .then(() => {
-    res.redirect('/projects')
-  })
-})
+
 
 router.post('/', upload.single('my-upload-field'),(req, res) => {
 console.log(req.file)
-res.send('hi')
-return 
   var project = {
     title: req.body.projectName,
     description: req.body.projectDescription,
-    category: req.body.category
-    // image:req.file.location
+    category: req.body.category,
+    image: req.file.location
   }
   console.log(project)
   db.addProject(project)
@@ -72,6 +60,12 @@ return
   })
 })
 
+router.post('/deleteProject/:id', (req, res) => {
+  db.deleteProjects(req.params.id)
+  .then(() => {
+    res.redirect('/projects')
+  })
+})
 
 
 

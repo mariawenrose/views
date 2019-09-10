@@ -1,13 +1,13 @@
 <div id="form-card">
-  <form id="project-text-form" action="/" method="post" name="form" enctype="multipart/form-data">  
+  <form id="project-text-form" action="/" method="post" name="form" enctype="multipart/form-data">
     <div class="input-wrapper">
       <label for="project-name" class="mb-xs">Project Name:</label>
-      <input type="text" name="projectName" class="mb"/>
+      <input type="text" name="projectName" class="mb" />
     </div>
 
     <div class="input-wrapper">
       <label for="project-description" class="mb-xs">Description:</label>
-      <input type="text" name="projectDescription" class="mb"/>
+      <input type="text" name="projectDescription" class="mb" />
     </div>
 
     <div class="radio-wrapper mb">
@@ -20,7 +20,9 @@
       </div>
     </div>
 
-    <input type='file' name='my-upload-field' class="mb-m"/>
-    <input type='submit' value='upload'/>
+    <input type='file' name='my-upload-field' class="mb-m mt" />
+    <div>
+      <input class="upload-button" type='submit' value='Upload' />
+    </div>
   </form>
 </div>

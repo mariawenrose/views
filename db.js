@@ -3,9 +3,9 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-getProjects,
-addProject,
-deleteProjects
+  getProjects,
+  addProject,
+  deleteProjects
 }
 
 
