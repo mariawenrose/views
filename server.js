@@ -2,7 +2,6 @@ const express = require('express')
 const hbs = require('express-handlebars')
 
 const userRoutes = require('./routes/routes')
-const s3 = require('./routes/s3')
 
 
 const server = express()
@@ -21,7 +20,6 @@ server.use(express.static('public'))
 // Routes
 
 server.use('/', userRoutes)
-server.use('/s3', s3)
 
 
 module.exports = server

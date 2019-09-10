@@ -1,5 +1,5 @@
 <div id="form-card">
-  <form id="project-text-form" action="/" method="post" name="form">  
+  <form id="project-text-form" action="/" method="post" name="form" enctype="multipart/form-data">  
     <div class="input-wrapper">
       <label for="project-name" class="mb-xs">Project Name:</label>
       <input type="text" name="projectName" class="mb"/>
@@ -19,9 +19,7 @@
         <label for="web-radio">Web</label>
       </div>
     </div>
-  </form>
 
-  <form id="project-image-form" action='/s3/upload' method="post" enctype="multipart/form-data">
     <input type='file' name='my-upload-field' class="mb-m"/>
     <input type='submit' value='upload'/>
   </form>
