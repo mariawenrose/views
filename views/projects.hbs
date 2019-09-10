@@ -1,27 +1,26 @@
 <div class="bg-container  bg-d">
 
-<div class="container space-evenly">
-  <div class="container-padding"></div>
-  <a href="/">≤ Home</a>
+  <div class="container space-evenly">
+    <div class="container-padding"></div>
+    <a href="/">≤ Home</a>
 
-  {{#each projects}}
-  <div class="project-tile">
-    <div class="project-card">
-      <div class="project-wrapper">
-        <div class="canvas">
-          <img class="project-image" src="{{image}}" alt="">
+    {{#each projects}}
+    <div class="project-tile">
+      <div class="project-card">
+        <div class="project-wrapper">
+          <div class="canvas">
+            <img class="project-image" src="{{image}}" alt="">
+          </div>
+          <div class="project-text">
+            <h4 class="project-title">{{title}}</h4>
+            <p class="project-desc">{{description}}</p>
+          </div>
         </div>
-        <div class="project-text">
-          <h4 class="project-title">{{title}}</h4>
-          <p class="project-desc">{{description}}</p>
-        </div>
+        <form action="/deleteProject/{{id}}" method="post">
+          <input type="submit" value="⁠—">
+        </form>
       </div>
     </div>
-
-    <form action="/deleteProject/{{id}}" method="post">
-      <input type="submit" value="delete">
-    </form>
+    {{/each}}
   </div>
-  {{/each}}
-</div>
 </div>

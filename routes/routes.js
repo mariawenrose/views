@@ -43,8 +43,6 @@ router.get('/category/:type', (req, res) => {
   })
 })
 
-
-
 router.post('/', upload.single('my-upload-field'),(req, res) => {
 console.log(req.file)
   var project = {
