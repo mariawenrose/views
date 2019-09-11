@@ -59,9 +59,13 @@ console.log(req.file)
 })
 
 router.post('/deleteProject/:id', (req, res) => {
-  db.deleteProjects(req.params.id)
-  .then(() => {
-    res.redirect('/projects')
+  db.getProjectCategory(req.params.id)
+  .then((result) => {
+    db.deleteProjects(req.params.id)
+    .then(() => {
+    console.log(result)
+    res.redirect('/category/'+ result.category)
+    })
   })
 })
 

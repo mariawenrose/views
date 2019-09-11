@@ -46,12 +46,13 @@
   align-items: center;
   width: 30%;
   height: auto;
+  margin-bottom: 2.5rem;
 }
 
 .project-card {
   width: 70%;
   height: auto;
-  max-height: 480px;
+  max-height: 460px;
   min-width: 300px;
   padding: 3rem;
   background-color: #414957;
@@ -89,6 +90,22 @@
 .project-text {
   margin-top: 1em;
   border-top: 1px solid rgba(238, 237, 237, 0.856);
+}
+
+.delete-button-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: left;
+  margin-top: 1em;
+}
+
+#delete-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgba(238, 237, 237, 0.856);
+  background: none;
+  border: 1px solid #ef6359;
+  border-radius: 50%;
 }
 
 /* index page */
