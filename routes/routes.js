@@ -45,11 +45,13 @@ router.get('/category/:type', (req, res) => {
 
 router.post('/', upload.single('my-upload-field'),(req, res) => {
 console.log(req.file)
+console.log(req.file.size)
   var project = {
     title: req.body.projectName,
     description: req.body.projectDescription,
     category: req.body.category,
-    image: req.file.location
+    image: req.file.location,
+    size: req.file.size
   }
   console.log(project)
   db.addProject(project)

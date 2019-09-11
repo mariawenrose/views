@@ -76,7 +76,6 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
-  /* background-color: whitesmoke; */
   border: 1px dashed black;
   -webkit-box-shadow: 1px 13px 24px 1px rgba(0, 0, 0, 0.27);
   -moz-box-shadow: 1px 13px 24px 1px rgba(0, 0, 0, 0.27);
@@ -279,6 +278,10 @@ input[type=text] {
   margin-top: .5em;
 }
 
+.project-size {
+  font-size: .8em;
+}
+
 /* ------------------------ 
 MEDIA QUERIES *
 ------------------------ */
@@ -298,7 +301,6 @@ MEDIA QUERIES *
 
 
 .hvr-float-shadow {
-  /* display: inline-block; */
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
